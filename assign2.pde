@@ -50,9 +50,7 @@ void setup () {
   rect(13,0,192,20);
   gameState=GAME_START;
   life = TOTAL_LIFE;
-  
 };
-
 void draw() {
  image(bg1,bg1x,0);
  image(bg2,bg2x,0);
@@ -92,12 +90,6 @@ void draw() {
    if (fightery<0){
     fightery=0;
   }
-    
-    
-    
-    
-    
-  
   switch(gameState){
     case GAME_START:image(start2,0,0);
   if(mouseX>210&&mouseX<480){if(mouseY>380&&mouseY<420){image(start1,1,1);if(mousePressed){gameState = GAME_RUN;}}}else{image(start2,0,0);}break;
@@ -105,11 +97,7 @@ void draw() {
     case GAME_WIN:
     case GAME_OVER:image(end2,0,0);
     if(mouseX>203&&mouseX<435){if(mouseY>300&&mouseY<345){image(end1,1,1);if(mousePressed){gameState = GAME_START;}}}else{image(end2,0,0);}break;
-    
   }
-  
-
-
 };
 void keyPressed(){
 if(key==CODED){
@@ -146,5 +134,4 @@ void keyReleased(){
   break;
   }
 }
-
 };
